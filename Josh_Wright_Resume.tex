@@ -2,108 +2,102 @@
 % # (c) Copyright 2015 Josh Wright
 \documentclass[12pt]{article}
 \usepackage{verbatim}
-\usepackage{syntonly}
+% \usepackage{syntonly}
 \usepackage{ragged2e}
 \usepackage{geometry}
 \usepackage{setspace}
-\geometry{letterpaper, margin=0.5in,top=0.25in}
+\usepackage{outlines} % for outline
+\usepackage{paralist} % for compactitem (compact itemize)
+\geometry{letterpaper, margin=0.5in,top=0.5in}
+% just in case I need even more space
+\newcommand{\upspace}{\vspace{1.5px}}
+\newcommand{\zzz}[1]{\upspace \0 \textbf{#1} \\ \vspace{-12px} \hrulefill \vspace{-2px} \\ }
+\newcommand{\aaa}{\upspace \1}
+\newcommand{\bbb}{\upspace \2}
+\newcommand{\ccc}{\upspace \3}
+\newcommand{\ddd}{\upspace \4}
 
 \begin{document}
 \noindent
-\linespread{0.5}
+% \linespread{0.5}
 % \onehalfspacing
 \pagenumbering{gobble}
-\setlength{\parskip}{-1pt}
-\let\olditemize\itemize
-\renewcommand{\itemize}{
-	\vspace{-2mm}
-	\olditemize
-	\setlength{\itemsep}{0pt}
-	\setlength{\parskip}{0pt}
-	\setlength{\parsep}{0pt}
-}
+% \setlength{\parskip}{-1pt}
+\sffamily
+
 \begin{center}
-\textbf{Josh Wright}\\
+{\large \textbf{Josh Wright}\\}
 750 Arch Stone\\
 San Antonio, TX 78258\\
 j0sh@tamu.edu\\
-(210) 863-2236\\
 github.com/madewithlinux\\
-\end{center}\vspace{1mm}
-% \verb!test!
+\end{center}
+
+% \begin{minipage}{0.3\linewidth}
+% \begin{flushleft}
+% % \textbf{Josh Wright}\\
+% j0sh@tamu.edu\\
+% (210) 863-2236\\
+% github.com/madewithlinux\\
+% \end{flushleft}
+% \end{minipage}
+% \hfill
+% \begin{minipage}{0.3\linewidth}
+% \begin{center}
+% {\Huge\textbf{Josh Wright}}
+% \end{center}
+% \end{minipage}
+% \hfill
+% \begin{minipage}{0.3\linewidth}
+% \begin{flushright}
+% 750 Arch Stone\\
+% San Antonio, TX 78258\\
+% \end{flushright}
+% \end{minipage}
 \begin{flushleft}
-\textbf{Education:}\\
-\vspace{-11pt}\hrulefill\\\vspace{-1.1mm}
-\begin{itemize}\vspace{-0mm}
-\item \textbf{Texas A\&M University}, College Station, TX \hfill Fall 2014 - Present\\
-	\begin{itemize} \vspace{-0mm}
-	\item Major: \textbf{Computer Engineering}\\
-	\item Expected Graduation: \textbf{May 2018}
-	\item TAMU GPA: \textbf{3.538}/4.0
-	\item Credit Hours: \textbf{51}
-	\end{itemize}
-	\item High School: \hfill Graduated May 2014\\
-	\begin{itemize} \vspace{-0mm}
-	\item \textbf{Home school}
-	\item GPA: \textbf{4.0}/4.0, including \textbf{Dual Credit} and \textbf{AP}
-	% nah
-	% \item 18 Dual Credit hours: Composition, US History 1\&2, Texas Government, Federal Government
-	% \item AP: Calculus AB, Physics B
-	\end{itemize}
-\end{itemize}
-\textbf{Work Experience:}\\
-\vspace{-11pt}\hrulefill\\\vspace{-1.1mm}
-\begin{itemize}\vspace{-0mm}
-\item Computer Nerdz of San Antonio, L.P: \hfill 2014 - 2015\\
-	\begin{itemize}
-	\item Position: \textbf{Field Technician}\\
-	\item Responsible for house calls regarding computer-related issues\\
-	\end{itemize}
-\item Lowe's Home Improvement: \hfill 2015\\
-	\begin{itemize}
-	\item Position: Customer Sales Associate\\
-	\item Responsible for helping customers achieve their home improvement goals\\
-	\end{itemize}
-\item Resonant Technology Partners: \hfill 2013 - 2014\\
-	\begin{itemize}
-	\item Remotely managed computers running Windows, using Kaseya and VBScript
-	\item Responsible for updating outdated software on computers
-	\item Developed methods of automating software updates
-	\end{itemize}
-\item Bear Creek Scout Reservation: \hfill 2011, 2012\\
-	\begin{itemize}
-	\item Instructor and general camp staff
-	\item Responsible for teaching several merit badges to Boy Scout campers, and additionally maintaining the camp.
-	\end{itemize}
-\end{itemize}
-
-\textbf{Technical Experience:}\\
-\vspace{-11pt}\hrulefill\\\vspace{-1.1mm}
-\begin{itemize}\vspace{-0mm}
-% done working at Lowes...
-% \item Woodworking, Fabrication and DIY experience 
-\item System administration experience with \textbf{Windows} and \textbf{Linux}
-\item Experience maintaining and upgrading computer hardware, such as hard drives, RAM, displays, etc...
-\item Familiar with MATLAB, \textbf{Python}, C++, and Bash programming languages
-\item Familiar with \textbf{Microsoft Office}
-\end{itemize}
-
-\textbf{Notable Awards:}\\
-\vspace{-11pt}\hrulefill\\\vspace{-1.1mm}
-\begin{itemize}\vspace{-0.3mm}
-\item \textbf{Eagle Scout} \hfill May 2012\\
-	\begin{itemize}\vspace{-1mm}
-	\item Built protective fence around air-conditioning units at local church
-	\end{itemize}\vspace{-1mm}
-\item Presidential Service Award: \hfill 2012\\
-	\begin{itemize}\vspace{-0mm}
-	\item Awarded for completion of 150 volunteer hours in 2012
-	\end{itemize}\vspace{-1mm}
-\item BEST Robotics Competition:
-	\begin{itemize}\vspace{-0mm}
-	\item 5\textsuperscript{th} place at state-wide competition 2012 and 48\textsuperscript{th} place in 2013
-	\end{itemize}\vspace{-1mm}
-\end{itemize}
-
+\begin{outline}[compactitem]
+\zzz{Education:}
+	\aaa \textbf{Texas A\&M University}, College Station, TX \hfill Fall 2014 - Present
+		\bbb Major: \textbf{Computer Engineering}
+		\bbb Expected Graduation: \textbf{May 2018}
+		\bbb TAMU GPA: \textbf{3.538}/4.0
+		\bbb Credit Hours: \textbf{51}
+		\bbb \textbf{Engineering Honors}
+	\aaa High School: \hfill Graduated May 2014
+		\bbb \textbf{Home school}
+		\bbb GPA: \textbf{4.0}/4.0, including \textbf{Dual Credit} and \textbf{AP}
+\zzz{Work Experience:}
+	\aaa Computer Nerdz of San Antonio, L.P: \hfill 2014 - 2015
+		\bbb Position: \textbf{Field Technician}
+		\bbb Responsible for house calls regarding computer-related issues
+	\aaa Lowe's Home Improvement: \hfill 2015
+		\bbb Position: Customer Sales Associate
+		\bbb Responsible for helping customers achieve their home improvement goals
+	\aaa Resonant Technology Partners: \hfill 2013 - 2014
+		\bbb Remotely managed computers running Windows, using Kaseya and VBScript
+		\bbb Responsible for updating outdated software on computers
+		\bbb Developed methods of automating software updates
+	% \aaa Bear Creek Scout Reservation: \hfill 2011, 2012
+	% 	\bbb Instructor and general camp staff
+	% 	\bbb Responsible for teaching several merit badges to Boy Scout campers, and additionally maintaining the camp.
+\zzz{Technical Experience:}
+	% done working at Lowes...
+	% \aaa Woodworking, Fabrication and DIY experience 
+	\aaa System administration experience with \textbf{Windows} and \textbf{Linux}
+	\aaa Experience maintaining and upgrading computer hardware, such as hard drives, RAM, displays, etc...
+	\aaa Familiar with MATLAB, \textbf{Python}, C++, and Bash programming languages
+	\aaa Familiar with \textbf{Microsoft Office}
+\zzz{Extracurricular Activities:}
+	\aaa MSC Aggie Cinema
+	\aaa Christian Engineering Leaders
+	\aaa Aggie Coding Club
+\zzz{Notable Awards:}
+	\aaa \textbf{Eagle Scout} \hfill May 2012
+		\bbb Built protective fence around air-conditioning units at local church
+	\aaa Presidential Service Award: \hfill 2012
+		\bbb Awarded for completion of 150 volunteer hours in 2012
+	\aaa BEST Robotics Competition:
+		\bbb 5\textsuperscript{th} place at state-wide competition 2012 and 48\textsuperscript{th} place in 2013
+\end{outline}
 \end{flushleft}
 \end{document}
