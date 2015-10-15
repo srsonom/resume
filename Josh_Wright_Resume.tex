@@ -8,14 +8,17 @@
 \usepackage{setspace}
 \usepackage{outlines} % for outline
 \usepackage{paralist} % for compactitem (compact itemize)
-\geometry{letterpaper, margin=0.5in,top=0.5in}
+\geometry{letterpaper, margin=0.7in}
 % just in case I need even more space
-\newcommand{\upspace}{\vspace{1.5px}}
-\newcommand{\zzz}[1]{\upspace \0 \textbf{#1} \\ \vspace{-12px} \hrulefill \vspace{-2px} \\ }
+\newcommand{\upspace}{\vspace{0px}}
+\newcommand{\zzz}[1]{\upspace \0 \textbf{#1} \\ \vspace{-0.7\baselineskip} \hrulefill \vspace{-2px} \\ }
+% \newcommand{\zzz}[1]{\upspace \0 \underline{ \textbf{#1} \hspace{\fill}}$\rule{\fill}{0.15mm}$}
 \newcommand{\aaa}{\upspace \1}
 \newcommand{\bbb}{\upspace \2}
 \newcommand{\ccc}{\upspace \3}
 \newcommand{\ddd}{\upspace \4}
+% makes second-level itemize bullets instead of dashes
+\renewcommand\labelitemii{\labelitemi}
 
 \begin{document}
 \noindent
@@ -26,7 +29,7 @@
 \sffamily
 
 \begin{center}
-{\large \textbf{Josh Wright}\\}
+{\Large \textbf{Josh Wright}\\}
 750 Arch Stone\\
 San Antonio, TX 78258\\
 j0sh@tamu.edu\\
@@ -63,6 +66,7 @@ github.com/madewithlinux\\
 		\bbb TAMU GPA: \textbf{3.538}/4.0
 		\bbb Credit Hours: \textbf{51}
 		\bbb \textbf{Engineering Honors}
+		\bbb Member of \textbf{National Society of Collegiate Scholars}
 	\aaa High School: \hfill Graduated May 2014
 		\bbb \textbf{Home school}
 		\bbb GPA: \textbf{4.0}/4.0, including \textbf{Dual Credit} and \textbf{AP}
@@ -88,9 +92,9 @@ github.com/madewithlinux\\
 	\aaa Familiar with MATLAB, \textbf{Python}, C++, and Bash programming languages
 	\aaa Familiar with \textbf{Microsoft Office}
 \zzz{Extracurricular Activities:}
+	\aaa Aggie Coding Club
 	\aaa MSC Aggie Cinema
 	\aaa Christian Engineering Leaders
-	\aaa Aggie Coding Club
 \zzz{Notable Awards:}
 	\aaa \textbf{Eagle Scout} \hfill May 2012
 		\bbb Built protective fence around air-conditioning units at local church
