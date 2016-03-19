@@ -10,19 +10,11 @@
 \usepackage{paralist} % for compactitem (compact itemize)
 \usepackage{multicol} % for multicolumn layout
 \geometry{letterpaper, margin=0.5in, top=0.35in}
-% just in case I need even more space
-\newcommand{\upspace}{\vspace{0px}}
-\newcommand{\zzz}[1]{\upspace \0 \textbf{#1} \\ \vspace{-0.8\baselineskip} \hrulefill \vspace{-2px} \\ }
-% \newcommand{\zzz}[1]{\upspace \0 \underline{ \textbf{#1} \hspace{\fill}}$\rule{\fill}{0.15mm}$}
-\newcommand{\aaa}{\upspace \1}
-\newcommand{\bbb}{\upspace \2}
-\newcommand{\ccc}{\upspace \3}
-\newcommand{\ddd}{\upspace \4}
-% makes second-level itemize bullets instead of dashes
-\renewcommand\labelitemii{\labelitemi}
 
 % Compress using:
 %;gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=Josh_Wright_Resume_compressed.pdf Josh_Wright_Resume.pdf; mv Josh_Wright_Resume{_compressed,}.pdf
+% clean:
+%; rm *.aux *.fdb_latexmk *.fls *.log
 
 \begin{document}
 \noindent
@@ -54,6 +46,7 @@ j0sh@tamu.edu\\
 San Antonio, TX 78258
 \end{flushright}
 \end{minipage}
+\vspace{-0.5em}
 
 %%%%%%%%%%%%%%%%%%
 %% main section %%
@@ -61,60 +54,76 @@ San Antonio, TX 78258
 \begin{flushleft}
 \begin{outline}[compactitem]
 
+%%%%%%%%%%%%%%%%%%%%
+%% spacing config %%
+%%%%%%%%%%%%%%%%%%%%
+% just in case I need even more space
+\newcommand{\upspace}{\vspace{0px}}
+% section titles
+\newcommand{\zzz}[1]{\upspace \0 \textbf{#1} \\ \vspace{-0.8\baselineskip} \hrulefill \vspace{-2px} \\ }
+% makes second-level itemize bullets instead of dashes
+\renewcommand\labelitemii{\labelitemi}
+% redefine the sub-headings to inject our space-saver
+\let\oldOne\1\let\oldTwo\2\let\oldThree\3\let\oldFour\4
+\renewcommand{\1}{\upspace \oldOne  }
+\renewcommand{\2}{\upspace \oldTwo  }
+\renewcommand{\3}{\upspace \oldThree}
+\renewcommand{\4}{\upspace \oldFour }
+
 \zzz{Education:}
-	\aaa \textbf{Texas A\&M University}, College Station, TX \hfill Fall 2014 - Present
-		\bbb Major: \textbf{Computer Engineering}
-		\bbb Expected Graduation: \textbf{May 2018}
-		\bbb TAMU GPA: \textbf{3.7}/4.0, Major GPA: \textbf{3.736}/4.0
-		\bbb Credit Hours: \textbf{65}
-		\bbb \textbf{Engineering Honors}, Member of \textbf{National Society of Collegiate Scholars}
-	% \aaa High School: \hfill Graduated May 2014
-	% 	\bbb \textbf{Home school}, GPA: \textbf{4.0}/4.0, including \textbf{Dual Credit} and \textbf{AP}
+	\1 \textbf{Texas A\&M University}, College Station, TX \hfill Fall 2014 - Present
+		\2 Major: \textbf{Computer Engineering}
+		\2 Expected Graduation: \textbf{May 2018}
+		\2 TAMU GPA: \textbf{3.7}/4.0, Major GPA: \textbf{3.736}/4.0
+		\2 Credit Hours: \textbf{65}
+		\2 \textbf{Engineering Honors}, Member of \textbf{National Society of Collegiate Scholars}
+	% \1 High School: \hfill Graduated May 2014
+	% 	\2 \textbf{Home school}, GPA: \textbf{4.0}/4.0, including \textbf{Dual Credit} and \textbf{AP}
 
 \zzz{Technical Experience:}
-	\aaa Advanced system experience with \textbf{Linux} and \textbf{Windows}
-	\aaa Experience servicing computer hardware, such as hard drives, RAM, displays, etc...
-	\aaa Familiar with MATLAB, \textbf{Python}, \textbf{C++}, and Bash programming languages, 
+	\1 Advanced system experience with \textbf{Linux} and \textbf{Windows}
+	\1 Experience servicing computer hardware, such as hard drives, RAM, displays, etc...
+	\1 Familiar with MATLAB, \textbf{Python}, \textbf{C++}, and Bash programming languages, 
 	\textbf{Microsoft Office} and LaTeX, git, HTML, CSS and JavaScript, limited experience with Java and Android Studio
 
 \zzz{Projects:}
-	\aaa CSCE 121: Designed and programmed a clone of Minesweeper in C++ using the FLTK graphics library. Included custom level size and mine concentration, and robust debugging (cheating) options
-	\aaa ENGR 111: Designed, built, and programmed an autonomous robot to navigate 
+	\1 CSCE 121: Designed and programmed a clone of Minesweeper in C++ using the FLTK graphics library. Included custom level size and mine concentration, and robust debugging (cheating) options
+	\1 ENGR 111: Designed, built, and programmed an autonomous robot to navigate 
 	a field with obstacles and manipulate them according to input (Fall 2014)
-	\aaa ENGR 112: Designed, built, and programmed a machine to read an input 
+	\1 ENGR 112: Designed, built, and programmed a machine to read an input 
 	barcode and dispense a specified combination of pellets autonomously (Spring 2015)
-	% \aaa Multithreaded utility to synchronize a disk and disk image using hash sums to quickly find outdated blocks.
+	% \1 Multithreaded utility to synchronize a disk and disk image using hash sums to quickly find outdated blocks.
 	% 	\verb|github.com/Joshua-Wright/disk_sync|
-	\aaa Proof of concept demonstrating an algorithm to discretely encode data in the least significant color bits of a PNG image.
+	\1 Proof of concept demonstrating an algorithm to discretely encode data in the least significant color bits of a PNG image.
 		\verb|github.com/Joshua-Wright/image_steganography|
-	\aaa Utility to index and search files, with the result order weighted by usage frequency.
+	\1 Utility to index and search files, with the result order weighted by usage frequency.
 		\verb|github.com/Joshua-Wright/FileFind|
 
 \zzz{Work Experience:}
-	\aaa Texas A\&M Help Desk Central \hfill 2015 - Present
-		\bbb \textbf{Student Worker}
-		\bbb Responsible for helping customers with computer-related or A\&M system related issues
-	\aaa Computer Nerdz of San Antonio, L.P: \hfill 2014 - 2015
-		\bbb Position: \textbf{Field Technician}
-		\bbb Responsible for house calls regarding computer-related issues such as malware removal and software setup
-	\aaa Lowe's Home Improvement: \hfill 2015
-		\bbb Position: Customer Sales Associate
-		\bbb Responsible for helping customers achieve their home improvement goals
-	\aaa Resonant Technology Partners: \hfill 2013 - 2014
-		\bbb Responsible for updating outdated software on computers
-		\bbb Remotely managed computers running Windows, using Kaseya and VBScript, developed methods of automating software updates
-	% \aaa Bear Creek Scout Reservation: \hfill 2011, 2012
-	% 	\bbb Instructor and general camp staff
-	% 	\bbb Responsible for teaching several merit badges to Boy Scout campers, and additionally maintaining the camp.
+	\1 Texas A\&M Help Desk Central \hfill 2015 - Present
+		\2 \textbf{Student Worker}
+		\2 Responsible for helping customers with computer-related or A\&M system related issues
+	\1 Computer Nerdz of San Antonio, L.P: \hfill 2014 - 2015
+		\2 Position: \textbf{Field Technician}
+		\2 Responsible for house calls regarding computer-related issues such as malware removal and software setup
+	\1 Lowe's Home Improvement: \hfill 2015
+		\2 Position: Customer Sales Associate
+		\2 Responsible for helping customers achieve their home improvement goals
+	\1 Resonant Technology Partners: \hfill 2013 - 2014
+		\2 Responsible for updating outdated software on computers
+		\2 Remotely managed computers running Windows, using Kaseya and VBScript, developed methods of automating software updates
+	% \1 Bear Creek Scout Reservation: \hfill 2011, 2012
+	% 	\2 Instructor and general camp staff
+	% 	\2 Responsible for teaching several merit badges to Boy Scout campers, and additionally maintaining the camp.
 
 \zzz{Organizations:}
-	\aaa Aggie Coding Club \hfill\labelitemi\hspace{1px} MSC Aggie Cinema \hfill\labelitemi\hspace{1px} Christian Engineering Leaders
+	\1 Aggie Coding Club \hfill\labelitemi\hspace{1px} MSC Aggie Cinema \hfill\labelitemi\hspace{1px} Christian Engineering Leaders
 
 \zzz{Notable Awards:}
-	\aaa \textbf{Eagle Scout} project: protective fence around air-conditioning units at local church \hfill May 2012
-	\aaa Presidential Service Award: 150 volunteer hours \hfill 2012
-	\aaa BEST Robotics Competition: 5\textsuperscript{th} place at state-wide competition 2012 and 48\textsuperscript{th} place in 2013
-		% \bbb 5\textsuperscript{th} place at state-wide competition 2012 and 48\textsuperscript{th} place in 2013
+	\1 \textbf{Eagle Scout} project: protective fence around air-conditioning units at local church \hfill May 2012
+	\1 Presidential Service Award: 150 volunteer hours \hfill 2012
+	\1 BEST Robotics Competition: 5\textsuperscript{th} place at state-wide competition 2012 and 48\textsuperscript{th} place in 2013
+		% \2 5\textsuperscript{th} place at state-wide competition 2012 and 48\textsuperscript{th} place in 2013
 
 \end{outline}
 \end{flushleft}
