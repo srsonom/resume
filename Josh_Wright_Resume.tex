@@ -10,7 +10,7 @@
 \usepackage{outlines} % for outline
 \usepackage{paralist} % for compactitem (compact itemize)
 \usepackage{multicol} % for multicolumn layout
-\geometry{letterpaper, margin=0.5in, top=0.25in}
+\geometry{letterpaper, margin=0.5in, top=0.3in}
 % \geometry{letterpaper, margin=0.5in, top=0.35in, left=1.5in}
 
 % Compress using:
@@ -19,7 +19,6 @@
 %; rm *.aux *.fdb_latexmk *.fls *.log
 
 \begin{document}
-\noindent
 % \linespread{0.5}
 \pagenumbering{gobble}
 % \setlength{\parskip}{-1pt}
@@ -28,6 +27,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 3-column header with title %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
 \begin{minipage}{0.3\linewidth}
 \begin{flushleft}
 j0sh@tamu.edu\\
@@ -62,7 +62,7 @@ San Antonio, TX 78258 \\
 %%%%%%%%%%%%%%%%%%%%
 % just in case I need even more space
 \newlength{\upspacelength}
-\setlength{\upspacelength}{-1.3px}
+\setlength{\upspacelength}{-0.8px}
 \newcommand{\upspace}{\vspace{\upspacelength}}
 % section titles
 \newcommand{\zzz}[1]{\upspace \0 \textbf{#1} \\ \vspace{-0.8\baselineskip} \hrulefill \vspace{-2px} \\ }
