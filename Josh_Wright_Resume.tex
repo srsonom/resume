@@ -49,7 +49,7 @@ San Antonio, TX 78258 \\
 (210) 383-8615
 \end{flushright}
 \end{minipage}
-\vspace{-0.5em}
+\vspace{-4px}
 
 %%%%%%%%%%%%%%%%%%
 %% main section %%
@@ -61,12 +61,14 @@ San Antonio, TX 78258 \\
 %% spacing config %%
 %%%%%%%%%%%%%%%%%%%%
 % just in case I need even more space
-\newcommand{\upspace}{\vspace{-1.5px}}
+\newlength{\upspacelength}
+\setlength{\upspacelength}{-1.3px}
+\newcommand{\upspace}{\vspace{\upspacelength}}
 % section titles
 \newcommand{\zzz}[1]{\upspace \0 \textbf{#1} \\ \vspace{-0.8\baselineskip} \hrulefill \vspace{-2px} \\ }
 % \newcommand{\zzz}[1]{\0 \hspace{-1.25in} \textbf{#1} \vspace{-10px} }
 % makes second-level itemize bullets instead of dashes
-\renewcommand\labelitemii{\labelitemi}
+% \renewcommand\labelitemii{\labelitemi}
 % redefine the sub-headings to inject our space-saver
 \let\oldOne\1\let\oldTwo\2\let\oldThree\3\let\oldFour\4
 \renewcommand{\1}{\upspace \oldOne  }
@@ -75,15 +77,12 @@ San Antonio, TX 78258 \\
 \renewcommand{\4}{\upspace \oldFour }
 
 
-% \addtolength{\leftskip}{12mm}
-
-
 \zzz{Objective:}
   \1 Seeking summer 2017 internship in Software Engineering, with particular interest in back-end development and software optimization.
 
 \zzz{Education:}
   \1 \textbf{Texas A\&M University}, College Station, TX \hfill Fall 2014 - May 2018
-  \\ \textbf{Computer Engineering}, Bachelor of Science
+  \\ \textbf{Computer Engineering}, Bachelor of Science; Math minor
   \\ Graduation: \textbf{May 2018}
   \\ GPA:  Major: \textbf{4.0}/4.0, Overall: 3.72/4.0
   \\ \textbf{Engineering Honors}, Member of \textbf{National Society of Collegiate Scholars}
@@ -92,23 +91,25 @@ San Antonio, TX 78258 \\
   %   \2 \textbf{Home school}, GPA: \textbf{4.0}/4.0, including \textbf{Dual Credit} and \textbf{AP}
 
 \zzz{Technical Skills:}
-  \1 Programming:
-    \begin{tabularx}{\textwidth}{X X X X X}
-      C++    & Java  & Python      & MATLAB   \upspace \\
-      LaTeX  & Git   & JavaScript  & HTML/CSS \upspace \\
+  \1 Programming: 
+    \\
+    \vspace{-\baselineskip}\vspace{-\upspacelength}
+    \begin{tabularx}{\textwidth}{X X X X X X X}
+      & C++   & Java & Python     & MATLAB   \upspace \\
+      & LaTeX & Git  & JavaScript & HTML/CSS \upspace \\
     \end{tabularx}
     \vspace{-5px}\upspace
   \1 
     Windows, Linux
     \hfill\labelitemi\hspace{1px}
     Computer hardware servicing
-    \hfill
-    \hfill
+    \hfill\hfill
 
 \zzz{Reverent Experience:}
-  \1 \textbf{Cisco Systems} \hfill May - August 2016
+  \1 \textbf{Cisco Systems, Richardson, TX} \hfill May - August 2016
   \\ \textbf{Software Engineering Intern}
-  \\ Worked on back-end systems in Java. Implemented new functionality and extending existing codebases
+  \\ Worked on back-end systems in Java
+  \\ Implemented new functionality and extending existing codebases
 
 \zzz{Projects:}
   \1 CSCE 121:  (Team of 4) \hfill Fall 2015 
@@ -116,21 +117,13 @@ San Antonio, TX 78258 \\
   \1 ENGR 112: (Team of 16) \hfill Spring 2015
     \\ Built a machine to read an input barcode and dispense the correct pellets autonomously 
   \1 ENGR 111: (Team of 4) \hfill Fall 2014
-    \\ Built an autonomous robot to navigate a field with obstacles and manipulate them
+    \\ Built an autonomous robot to navigate a field with obstacles and preform tasks
   % \1 Multithreaded utility to synchronize a disk and disk image using hash sums to quickly find outdated blocks.
   %   \verb|github.com/Joshua-Wright/disk_sync|
   % \1 Proof of concept demonstrating an algorithm to discretely encode data in the least significant color bits of a PNG image.
   %   \verb|github.com/Joshua-Wright/image_steganography|
   % \1 Utility to index and search files, with the result order weighted by usage frequency.
   %   \verb|github.com/Joshua-Wright/FileFind|
-
-\zzz{Organizations:}
-  \1 
-    Aggie Coding Club
-    \hfill\labelitemi\hspace{1px}
-    MSC Aggie Cinema
-    \hfill\labelitemi\hspace{1px}
-    TAMU CSE Honors
 
 \zzz{Work Experience:}
   \1 \textbf{Texas A\&M Help Desk Central, College Station} \hfill 2015 - Present
@@ -156,11 +149,19 @@ San Antonio, TX 78258 \\
   \1 Member of \textbf{National Society of Collegiate Scholars}
   \1 Recipient of 3 scholarships funding 30\% of tuition:
     % \\ 
-    Elkin Scholarship in Computer Science and Engineering
-    \labelitemiii\space
-    Computer Science Honors Departmental Scholarship
-    \labelitemiii\space
-    Dwight Look College of Engineering Student Scholarship
+    \2 Elkin Scholarship in Computer Science and Engineering
+    % \labelitemiii\space
+    \2 Computer Science Honors Departmental Scholarship
+    % \labelitemiii\space
+    \2 Dwight Look College of Engineering Student Scholarship
+
+\zzz{Organizations:}
+  \1 
+    Aggie Coding Club
+    \hfill\labelitemi\hspace{1px}
+    MSC Aggie Cinema
+    \hfill\labelitemi\hspace{1px}
+    TAMU CSE Honors
 
 \zzz{Notable Awards:}
   \1 \textbf{Eagle Scout} project: protective fence around air-conditioning units at local church \hfill May 2012
