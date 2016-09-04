@@ -6,10 +6,12 @@
 \usepackage{ragged2e}
 \usepackage{geometry}
 \usepackage{setspace}
+\usepackage{tabularx}
 \usepackage{outlines} % for outline
 \usepackage{paralist} % for compactitem (compact itemize)
 \usepackage{multicol} % for multicolumn layout
-\geometry{letterpaper, margin=0.5in, top=0.35in}
+\geometry{letterpaper, margin=0.5in, top=0.25in}
+% \geometry{letterpaper, margin=0.5in, top=0.35in, left=1.5in}
 
 % Compress using:
 %;gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=Josh_Wright_Resume_compressed.pdf Josh_Wright_Resume.pdf; mv Josh_Wright_Resume{_compressed,}.pdf
@@ -43,7 +45,8 @@ j0sh@tamu.edu\\
 \begin{minipage}{0.3\linewidth}
 \begin{flushright}
 750 Arch Stone\\
-San Antonio, TX 78258
+San Antonio, TX 78258 \\
+(210) 383-8615
 \end{flushright}
 \end{minipage}
 \vspace{-0.5em}
@@ -58,9 +61,10 @@ San Antonio, TX 78258
 %% spacing config %%
 %%%%%%%%%%%%%%%%%%%%
 % just in case I need even more space
-\newcommand{\upspace}{\vspace{0px}}
+\newcommand{\upspace}{\vspace{-1.5px}}
 % section titles
 \newcommand{\zzz}[1]{\upspace \0 \textbf{#1} \\ \vspace{-0.8\baselineskip} \hrulefill \vspace{-2px} \\ }
+% \newcommand{\zzz}[1]{\0 \hspace{-1.25in} \textbf{#1} \vspace{-10px} }
 % makes second-level itemize bullets instead of dashes
 \renewcommand\labelitemii{\labelitemi}
 % redefine the sub-headings to inject our space-saver
@@ -70,63 +74,99 @@ San Antonio, TX 78258
 \renewcommand{\3}{\upspace \oldThree}
 \renewcommand{\4}{\upspace \oldFour }
 
+
+% \addtolength{\leftskip}{12mm}
+
+
+\zzz{Objective:}
+  \1 Seeking summer 2017 internship in Software Engineering, with particular interest in back-end development and software optimization.
+
 \zzz{Education:}
-  \1 \textbf{Texas A\&M University}, College Station, TX \hfill Fall 2014 - Present
-    \2 Major: \textbf{Computer Engineering}
-    \2 Expected Graduation: \textbf{May 2018}
-    \2 TAMU GPA: \textbf{3.72}/4.0
-    \2 Credit Hours: \textbf{79}
-    \2 \textbf{Engineering Honors}, Member of \textbf{National Society of Collegiate Scholars}
+  \1 \textbf{Texas A\&M University}, College Station, TX \hfill Fall 2014 - May 2018
+  \\ \textbf{Computer Engineering}, Bachelor of Science
+  \\ Graduation: \textbf{May 2018}
+  \\ GPA:  Major: \textbf{3.75}/4.0, Overall: 3.72/4.0
+  \\ \textbf{Engineering Honors}, Member of \textbf{National Society of Collegiate Scholars}
+  \\ Tuition: $30\%$ scholarships, $32\%$ work
   % \1 High School: \hfill Graduated May 2014
   %   \2 \textbf{Home school}, GPA: \textbf{4.0}/4.0, including \textbf{Dual Credit} and \textbf{AP}
 
-\zzz{Technical Experience:}
-  \1 Advanced system experience with \textbf{Linux} and \textbf{Windows}
-  \1 Experience servicing computer hardware, such as hard drives, RAM, displays, etc...
-  \1 Familiar with MATLAB, Python, \textbf{C++}, JavaScript, Java, Android, and Bash programming languages, 
-  \textbf{Microsoft Office} and LaTeX, git, HTML, CSS
+\zzz{Technical Skills:}
+  \1 Programming:
+    \begin{tabularx}{\textwidth}{X X X X X}
+      C++    & Java  & Python      & MATLAB   \upspace \\
+      LaTeX  & Git   & JavaScript  & HTML/CSS \upspace \\
+    \end{tabularx}
+    \vspace{-5px}\upspace
+  \1 
+    Windows, Linux
+    \hfill\labelitemi\hspace{1px}
+    Computer hardware servicing
+    \hfill
+    \hfill
+
+\zzz{Reverent Experience:}
+  \1 \textbf{Cisco Systems} \hfill May - August 2016
+  \\ \textbf{Software Engineering Intern}
+  \\ Worked on back-end systems in Java. Implemented new functionality and extending existing codebases
 
 \zzz{Projects:}
-  \1 CSCE 121: Designed and programmed a clone of Minesweeper in C++ using the FLTK graphics library. Included custom level size and mine concentration, and robust debugging (cheating) options
-  \1 ENGR 111: Designed, built, and programmed an autonomous robot to navigate 
-  a field with obstacles and manipulate them according to input (Fall 2014)
-  \1 ENGR 112: Designed, built, and programmed a machine to read an input 
-  barcode and dispense a specified combination of pellets autonomously (Spring 2015)
+  \1 CSCE 121:  (Team of 4) \hfill Fall 2015 
+    \\ Designed and programmed a clone of Minesweeper in C++ using the FLTK graphics library. Included custom level size and mine concentration, and robust debugging (cheating) options
+  \1 ENGR 112: (Team of 16) \hfill Spring 2015
+    \\ Built a machine to read an input barcode and dispense the correct pellets autonomously 
+  \1 ENGR 111: (Team of 4) \hfill Fall 2014
+    \\ Built an autonomous robot to navigate a field with obstacles and manipulate them
   % \1 Multithreaded utility to synchronize a disk and disk image using hash sums to quickly find outdated blocks.
   %   \verb|github.com/Joshua-Wright/disk_sync|
-  \1 Proof of concept demonstrating an algorithm to discretely encode data in the least significant color bits of a PNG image.
-    \verb|github.com/Joshua-Wright/image_steganography|
-  \1 Utility to index and search files, with the result order weighted by usage frequency.
-    \verb|github.com/Joshua-Wright/FileFind|
-
-\zzz{Work Experience:}
-  \1 Cisco Systems \hfill May - August 2016
-    \2 Position: Software Engineering Intern
-    \2 Worked on back-end systems in Java. Included implementing new functionality and extending existing codebases
-  \1 Texas A\&M Help Desk Central \hfill 2015 - Present
-    \2 \textbf{Student Worker}
-    \2 Responsible for helping customers with computer-related or A\&M system related issues
-  \1 Computer Nerdz of San Antonio, L.P: \hfill 2014 - 2015
-    \2 Position: \textbf{Field Technician}
-    \2 Responsible for house calls regarding computer-related issues such as malware removal and software setup
-  % \1 Lowe's Home Improvement: \hfill 2015
-  %   \2 Position: Customer Sales Associate
-  %   \2 Responsible for helping customers achieve their home improvement goals
-  \1 Resonant Technology Partners: \hfill 2013 - 2014
-    \2 Responsible for updating outdated software on computers
-    \2 Remotely managed computers running Windows, using Kaseya and VBScript, developed methods of automating software updates
-  % \1 Bear Creek Scout Reservation: \hfill 2011, 2012
-  %   \2 Instructor and general camp staff
-  %   \2 Responsible for teaching several merit badges to Boy Scout campers, and additionally maintaining the camp.
+  % \1 Proof of concept demonstrating an algorithm to discretely encode data in the least significant color bits of a PNG image.
+  %   \verb|github.com/Joshua-Wright/image_steganography|
+  % \1 Utility to index and search files, with the result order weighted by usage frequency.
+  %   \verb|github.com/Joshua-Wright/FileFind|
 
 \zzz{Organizations:}
-  \1 Aggie Coding Club \hfill\labelitemi\hspace{1px} MSC Aggie Cinema \hfill\labelitemi\hspace{1px} Christian Engineering Leaders
+  \1 
+    Aggie Coding Club
+    \hfill\labelitemi\hspace{1px}
+    MSC Aggie Cinema
+    \hfill\labelitemi\hspace{1px}
+    TAMU CSE Honors
+
+\zzz{Work Experience:}
+  \1 \textbf{Texas A\&M Help Desk Central, College Station} \hfill 2015 - Present
+    \\ \textbf{Student Worker}
+    \\ Helped customers with computer or A\&M system related issues
+  \1 \textbf{Computer Nerdz of San Antonio, L.P.} \hfill 2014 - 2015
+    \\ \textbf{Field Technician}
+    \\ House calls regarding computer-related issues such as malware removal or software setup
+  % \1 Lowe's Home Improvement: \hfill 2015
+  %   \\ Customer Sales Associate
+  %   \\ Responsible for helping customers achieve their home improvement goals
+  \1 \textbf{Resonant Technology Partners} \hfill 2013 - 2014
+    \\ Developed utilities to remotely update software on managed computers
+    % \\ Updated obsolete software on remote computers
+    % \\ Remotely managed computers running Windows, using Kaseya and VBScript
+    % \\ Developed methods of automating software updates
+  % \1 Bear Creek Scout Reservation: \hfill 2011, 2012
+  %   \\ Instructor and general camp staff
+  %   \\ Responsible for teaching several merit badges to Boy Scout campers, and additionally maintaining the camp.
+
+\zzz{Honors:}
+  \1 \textbf{TAMU Engineering Honors}
+  \1 Member of \textbf{National Society of Collegiate Scholars}
+  \1 Recipient of 3 scholarships funding 30\% of tuition:
+    % \\ 
+    Elkin Scholarship in Computer Science and Engineering
+    \labelitemiii\space
+    Computer Science Honors Departmental Scholarship
+    \labelitemiii\space
+    Dwight Look College of Engineering Student Scholarship
 
 \zzz{Notable Awards:}
   \1 \textbf{Eagle Scout} project: protective fence around air-conditioning units at local church \hfill May 2012
   \1 Presidential Volunteer Service Award \hfill 2013, 2014
-  \1 BEST Robotics Competition: 5\textsuperscript{th} place at state-wide competition 2012 and 48\textsuperscript{th} place in 2013
-    % \2 5\textsuperscript{th} place at state-wide competition 2012 and 48\textsuperscript{th} place in 2013
+  \1 BEST Robotics Competition: 5\textsuperscript{th} place state-wide \hfill 2012 \hfill
+  % trailing hfill because otherwise it is too far to the right for no easily discernable reason
 
 \end{outline}
 \end{flushleft}
