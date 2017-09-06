@@ -1,0 +1,144 @@
+% Sara_Rae_Sonom_Resume.tex
+% Josh_Wright_Resume.tex
+% (c) Copyright 2015 Josh Wright
+\documentclass[12pt]{article}
+\usepackage{verbatim}
+% \usepackage{syntonly}
+\usepackage{ragged2e}
+\usepackage{textcomp}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{outlines} % for outline
+\usepackage{paralist} % for compactitem (compact itemize)
+\usepackage{multicol} % for multicolumn layout
+\geometry{letterpaper, margin=0.4in, top=0.3in}
+% \geometry{letterpaper, margin=0.5in, top=0.35in, left=1.5in}
+
+% Compress using:
+%;gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=Josh_Wright_Resume_compressed.pdf Josh_Wright_Resume.pdf; mv Josh_Wright_Resume{_compressed,}.pdf
+% clean:
+%; rm *.aux *.fdb_latexmk *.fls *.log
+
+\begin{document}
+% \linespread{0.5}
+\pagenumbering{gobble}
+% \setlength{\parskip}{-1pt}
+% \sffamily
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 3-column header with title %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+\begin{minipage}{0.25\linewidth}
+\begin{flushleft}
+srsonom@tamu.edu\\
+(972) 365-2436\\
+\end{flushleft}
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\linewidth}
+\begin{center}
+{\Huge\textbf{Sara Rae Sonom}}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}{0.25\linewidth}
+\begin{flushright}
+1241 Seminole Drive\\
+Richardson, TX 75080 \\
+\end{flushright}
+\end{minipage}
+\vspace{-4px}
+
+%%%%%%%%%%%%%%%%%%
+%% main section %%
+%%%%%%%%%%%%%%%%%%
+\begin{flushleft}
+\begin{outline}[compactitem]
+
+%%%%%%%%%%%%%%%%%%%%
+%% spacing config %%
+%%%%%%%%%%%%%%%%%%%%
+% just in case I need even more space
+\newlength{\upspacelength}
+\setlength{\upspacelength}{0px}
+\newcommand{\upspace}{\vspace{\upspacelength}}
+% section titles
+\newcommand{\zzz}[1]{\upspace \0 \textbf{#1} \\ \vspace{-0.8\baselineskip} \hrulefill \vspace{-2px} \\ }
+% \newcommand{\zzz}[1]{\0 \hspace{-1.25in} \textbf{#1} \vspace{-10px} }
+% makes second-level itemize bullets instead of dashes
+% \renewcommand\labelitemii{\labelitemi}
+% redefine the sub-headings to inject our space-saver
+\let\oldOne\1\let\oldTwo\2\let\oldThree\3\let\oldFour\4
+\renewcommand{\1}{\upspace \oldOne  }
+\renewcommand{\2}{\upspace \oldTwo  }
+\renewcommand{\3}{\upspace \oldThree}
+\renewcommand{\4}{\upspace \oldFour }
+\hfill \break
+\zzz{Education}
+  \1 \textbf{Texas A\&M University}, College Station, TX 
+  \\ \textbf{Bachelor of Science in Electrical Engineering} \hfill May \textquotesingle19
+  \\ Minor in Computer Science, Minor in Math
+
+\zzz{Technical Skills}
+\smallskip
+    \begin{tabularx}{\textwidth}{X X X X X X}
+    & C++     & MATLAB  & Verilog       & \LaTeX    & \upspace \\
+    & Linux   & Windows & ChromeOS      &           & \upspace \\
+    \end{tabularx}
+    \vspace{-5px}\upspace
+
+\zzz{Work Experience}
+
+  \1 \textbf{Help Desk Central}, Texas A$\&$M IT Service Desk $|$  College Station, TX
+  \\ \textit{Counter Specialist} \hfill Jan \textquotesingle17 - Jul \textquotesingle17
+  \\    Authorized procedures of lower-level consultants
+  \\    Executed OS installations, ensured data recovery
+  \\    Identified hardware and software issues, performed necessary replacements
+  \\    \textit{Phone Consultant} \hfill Mar \textquotesingle16 - Jul \textquotesingle17
+  \\    Assisted callers with troubleshooting personal and A$\&$M System technology 
+
+    \1 \textbf{PC-NET Consulting, LLC, IT Solutions} $|$ Shreveport, LA
+  \\    \textit{Intern} \hfill Jul \textquotesingle16
+  \\    Provided staff support during technology assessment expeditions
+
+\zzz{Projects}
+  \1 \textbf{Chinese Solitaire Game Solver} (Individual - In Progress)
+   \\  Generate optimal Chinese Solitaire move map using BFS and aspects of Minimax
+  \1 \textbf{Electronics Course} (Team of 3)
+    \\ Designed and constructed a multi-stage amplifier with predetermined specifications
+  \1 \textbf{Data Structures and Algorithms Course}  (Individual)
+    \\ Created program to read maze input data from text file and perform Depth First Search 
+  \1 \textbf{Introduction to Programing Design and Concepts Course} (Team of 3)
+    \\ Designed and programmed Minesweeper game using C++ and FLTK
+
+\zzz{Leadership}
+
+\1  \textbf{The Big Event}, Volunteer Community Service Event $|$ Texas A$\&$M University
+\\      \textit{Team Leader} \hfill Mar \textquotesingle17 
+\\      Organized 13 members of the Texas A$\&$M Wind Symphony for volunteer event
+\1    \textbf{TAMU ACM SIGGRAPH}, Computer Graphics Organization $|$ Texas A$\&$M University
+\\      \textit{Outreach Officer} \hfill Dec \textquotesingle16 - Dec \textquotesingle17
+\\      Coordinated monthly visits with three high schools
+\\      Assembled volunteer teams for school presentations, annual competition judging   
+\1      \textbf{Bassoon Academy of Dallas}, Summer Music Camp $|$ Richardson, TX
+\\      \textit{Camp Counselor} \hfill Jun \textquotesingle16
+\\      Assisted with music education activities in sectionals and full group
+
+\zzz{Honors}
+\1      \textbf{SIGGRAPH 2016 - National Chapter Meeting}, National Conference $|$ Anaheim, CA
+\\      \textit{Chapter Representative} \hfill Jul \textquotesingle16
+\\      Appointed representative by TAMU SIGGRAPH Chapter President 
+  \hfill % extra hfill or else the last line goes too far to the right for some reason
+
+\zzz{Activities}
+\1      \textbf{Texas A$\&$M Wind Symphony}, Top Performing Ensemble \hfill Aug \textquotesingle14 - Present
+\1      \textbf{TAMU ACM SIGGRAPH}, Computer Graphics Organization \hfill Aug \textquotesingle15 - Present
+\1      \textbf{SIGGRAPH 2016}, Assoc. of Computing Machinery National Conference \hfill Jul \textquotesingle16
+\1      \textbf{Texas A$\&$M Symphony Orchestra}  , Top Performing Orchestra \hfill Aug \textquotesingle14 - May \textquotesingle16
+\1      \textbf{Memorial Student Center Visual Arts Committee} \hfill Aug \textquotesingle14 - May \textquotesingle15
+
+\end{outline}
+\end{flushleft}
+\end{document}
